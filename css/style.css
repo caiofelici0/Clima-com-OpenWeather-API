@@ -1,0 +1,146 @@
+/* Geral */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: rgb(246, 253, 149);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+input {
+  padding: .5rem 0 .5rem 13px;
+  border: none;
+  border-radius: 20px;
+}
+
+input:focus{
+  outline: none;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: .5rem;
+  border: 2px solid #55bcdb;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #55bcdb;
+  cursor: pointer;
+  transition: .4s;
+}
+
+button:hover {
+  background-color: #fffb16;
+}
+
+button i{
+  pointer-events: none;
+}
+
+.hide {
+  display: none;
+}
+
+/* Container */
+
+#container {
+  max-width: 450px;
+  margin: auto auto;
+  background-color: #55bcdb;
+  border-radius: 2rem;
+  padding: 2rem;
+  color: #fff;
+}
+
+/* Header */
+
+#container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #fff;
+}
+
+header i {
+  font-size: 2rem;
+}
+
+header i.fa-sun{
+  color: #fffb16;
+  margin-right: .5rem;
+}
+
+header i.fa-cloud{
+  color: #fff;
+  margin-left: .5rem;
+}
+
+/* Pesquisa */
+
+#area-pesquisa h4 {
+  padding-bottom: .3rem;
+}
+
+#pesquisa {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+#pesquisa-input {
+  flex: 1;
+}
+
+#pesquisa button {
+  margin-left: .5rem;
+}
+
+/* Informações do clima */
+
+#info-clima {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#info-clima h2 {
+  display: flex;
+}
+
+#info-clima h2 i, #info-clima h2 span {
+  margin-right: .3rem;
+}
+
+#descricao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#descricao {
+  font-size: 1.5rem;
+}
+
+#detalhes-container {
+  display: flex;
+}
+
+#umidade {
+  margin-right: 1rem;
+}
+
+#temperatura {
+  font-size: 5rem;
+}

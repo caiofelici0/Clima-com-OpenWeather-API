@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima da Galera</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Font Awesome -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    
+    <div id="container">
+      <header>
+        <i class="fa-solid fa-sun"></i>
+        <h1>Clima da Galera</h1>
+        <i class="fa-solid fa-cloud"></i>
+      </header>
+
+      <div id="area-pesquisa">
+        <h4>Consulte o clima em uma cidade:</h4>
+        <form id="pesquisa">
+          <input type="text" id="pesquisa-input" placeholder="Digite o nome da cidade">
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+      <div id="info-clima">
+        <h2>
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="cidade">Aracaju</span>
+          <img src="https://flagsapi.com/BR/flat/32.png" alt="bandeira" id="bandeira-pais">
+        </h2>
+        <div id="descricao-container">
+          <img src="https://openweathermap.org/img/wn/02d.png" alt="Condições do tempo" id="clima-icon">
+          <p id="descricao">Nublado</p>
+        </div>
+        <p id="temperatura"><span>38</span>&deg;C</p>
+        <div id="detalhes-container">
+          <p id="umidade">
+            <i class="fa-solid fa-droplet"></i>
+            <span>48%</span>
+          </p>
+          <p id="vento">
+            <i class="fa-solid fa-wind"></i>
+            <span>15km/h</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
