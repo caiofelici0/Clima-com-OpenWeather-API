@@ -52,3 +52,9 @@ pesquisaForm.addEventListener("submit", (e) => {
 
   showClima(cidade);
 });
+
+pesquisaInput.addEventListener("keyup", (e) => {
+  if(e.code === "Enter"){
+    showClima(cidade);
+  }
+});
