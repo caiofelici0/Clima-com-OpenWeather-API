@@ -46,7 +46,7 @@ button i{
   pointer-events: none;
 }
 
-.hide {
+#info-clima.hide {
   display: none;
 }
 
@@ -94,7 +94,6 @@ header i.fa-cloud{
 
 #pesquisa {
   display: flex;
-  margin-bottom: 1.5rem;
 }
 
 #pesquisa-input {
@@ -112,6 +111,7 @@ header i.fa-cloud{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
 #info-clima h2 {
@@ -131,6 +131,7 @@ header i.fa-cloud{
 
 #descricao {
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 
 #detalhes-container {

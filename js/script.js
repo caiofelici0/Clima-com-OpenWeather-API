@@ -5,6 +5,7 @@ const apiCountryURL = "https://flagsapi.com/BR/flat/32.png";
 
 const pesquisaInput = document.querySelector("#pesquisa-input");
 const pesquisaForm = document.querySelector("#pesquisa");
+const infoClimaDiv = document.querySelector("#info-clima");
 const cidadeSpan = document.querySelector("#cidade");
 const paisImg = document.querySelector("#bandeira-pais");
 const climaIcon = document.querySelector("#clima-icon");
@@ -16,18 +17,30 @@ const ventoSpan = document.querySelector("#vento span");
 // Funções
 
 const getDadosClima = async(cidade) => {
-  const apiClimaURL = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${apiClimaKey}&lan=pt_br`;
+  const apiClimaURL = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${apiClimaKey}&lang=pt_br`;
 
   const res = await fetch(apiClimaURL);
   const data = await res.json();
 
   console.log(data);
+  console.log(data.main.temp);
+
+  return data;
 }
 
-const showClima = (cidade) => {
-  getDadosClima(cidade);
+const showClima = async(cidade) => {
+  const data = await getDadosClima(cidade);
 
-  cidadeSpan.innerText = cidade;
+  cidadeSpan.innerText = data.name;
+  paisImg.src = `https://flagsapi.com/${data.sys.country}/flat/32.png`;
+  climaIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+  descricaoP.innerText = data.weather[0].description;
+  temperaturaSpan.innerText = data.main.temp.toFixed(0);
+  umidadeSpan.innerText = `${data.main.humidity}%`;
+  ventoSpan.innerText = `${data.wind.speed.toFixed(1)} km/h`;
+
+  pesquisaInput.value = "";
+  infoClimaDiv.classList.remove("hide");
 }
 
 // Eventos
